@@ -1,0 +1,62 @@
+/*
+* @Author: UEDHE
+* @Date:   2017-08-21 11:53:02
+* @Last Modified by:   UEDHE
+* @Last Modified time: 2017-08-21 12:46:10
+*/
+body{
+	font:14px/1.5 '微软雅黑'
+}
+*{
+	margin:0;
+	padding:0;
+}
+ul,ol{
+	list-style: none;
+}
+.drop-down-wrap{
+	position: relative;
+	margin:20px auto;
+	padding:0 10px;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	border:1px solid #ddd;
+}
+.drop-down-wrap:after{
+	content: '';
+	position: absolute;
+	right: 10px;
+	top:50%;
+	margin-top:-3px;
+	border:6px solid transparent;
+	border-top-color:#aaa;
+	transition:all .25s ease 0s;
+}
+.on:after{
+	margin-top:-6px;
+	transform:rotate(180deg);
+}
+.drop-down-text{
+	display: block;
+	cursor: pointer;
+}
+.drop-down{
+	position: absolute;
+	left:-1px;
+	right: -1px;
+	top:40px;
+	display: none;
+	overflow: hidden;
+	overflow-y:auto;
+	max-height: 200px;
+	border:1px solid #ddd;
+}
+.drop-down-item{
+	cursor: pointer;
+	text-indent: 10px;
+	border-top:1px solid #ddd;
+}
+.drop-down-item:first-child{
+	border:none;
+}
